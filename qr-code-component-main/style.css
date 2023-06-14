@@ -1,0 +1,93 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap');
+
+:root{
+    /* colors  */
+    --body-bg-color: hsl(212, 45%, 89%);
+    --qr-bg-color: hsl(0, 0%, 100%);
+    --first-txt-color: hsl(218, 44%, 22%);
+    --second-txt-color: hsl(220, 15%, 55%);
+    /* font size  */
+    font-size: 15px;
+    --fs-first: 1.2rem;
+    --fs-second: 1rem;
+    /* font family  */
+    --ff-body:'Outfit', sans-serif;
+    /* font weight  */
+    --fw-first: 800;
+    --fw-second: 400;
+
+}
+/* css reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-body);
+}
+img, svg{
+    display: block;
+    width: 100%;
+
+}
+/* utility classes  */
+.body-bg-color{
+    background-color: var(--body-bg-color);
+}
+.qr-bg-color{
+    background-color: var(--qr-bg-color);
+}
+.first-txt-color{
+    color: var(--first-txt-color);
+}
+.second-txt-color{
+    color: var(--second-txt-color);
+}
+.fs-first{
+    font-size: var(--fs-first);
+}
+.fs-second{
+    font-size: var(--fs-second);
+}
+.ff-body{
+    font-family: var(--ff-body);
+}
+.fw-first{
+    font-weight: var(--fw-first);
+}
+.fw-second{
+    font-weight: var(--fw-second);
+}
+.border{
+    /* border: 1px solid black; */
+}
+/* general classes  */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    width: 275px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 5px 5px rgba(0, 0, 0, 0.103) ;
+    animation: QR 2s ease-in-out;
+}
+@keyframes QR {
+    0%{
+        opacity: 0;
+        transform: scale(.8);
+    }
+    
+}
+.child{
+    margin: .8rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.child:not(:nth-child(1)){
+    overflow: visible;
+    padding: .2rem .4rem;
+    text-align: center;
+}
